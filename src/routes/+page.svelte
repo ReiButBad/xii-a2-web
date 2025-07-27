@@ -26,7 +26,6 @@
             container.style.opacity = "0"
             showTable = true
             await sleep(1000)
-            container.remove();
             console.info("transition complete")
             container.remove()
             splashScreen.remove()
@@ -63,7 +62,7 @@
         }
 
         window.addEventListener("wheel", onScroll)
-        window.addEventListener("touchstart", onTouchMove)
+        window.addEventListener("touchstart", onTouchStart)
         window.addEventListener("touchmove", onTouchMove)
     })
 </script>
@@ -76,7 +75,7 @@
     </div>
 </div>
 
-<div class="w-full h-dvh z-[49] fixed transition-all duration-1000 {!showTable ? 'translate-y-full' : ''}">
+<div class="w-full h-dvh z-[49] fixed transition-all duration-1000" class:translate-y-full={!showTable}>
     <div class="w-full h-full flex items-end justify-center">
         <Table></Table>
     </div>
