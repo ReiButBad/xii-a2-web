@@ -15,13 +15,3 @@
 </script>
 
 {@render children()}
-
-<style>
-	:global(body) { 
-        background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url("/bg.webp");
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-        background-position: center;
-        background-size: cover;
-	}
-</style>
